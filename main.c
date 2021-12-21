@@ -5,6 +5,8 @@
 int Fun_Add(void)
 {
 	
+	int32_t Sum = 0 , firstNum = 0 ,SecondNum = 0 ;
+
 	/* inform the user with the program operation */
 	printf(" welcome to the Add two number program \n ");
 	
@@ -23,12 +25,32 @@ int Fun_Add(void)
 	
 }
 
+int Fun_Subtrack(void)
+{
+	int32_t Subtraction = 0 , firstNum = 0 ,SecondNum = 0 ;
+	
+	/* inform the user with the program operation */
+	printf(" welcome to the subtraction two number program \n ");
+	
+	/* ask user to enter the first number */
+	printf("enter the first num : \n ");
+	scanf("%d" , &firstNum );
+	
+	/* ask user to enter the second number */
+	printf("enter the first num : \n ");
+	scanf("%d" , &SecondNum );
+	
+	Subtraction = firstNum - SecondNum ;
+	
+	printf("the subtraction of  firstNum - SecondNum is = %d ", firstNum, SecondNum ,  Subtraction );
+	
+	
+}
 
 int main(void)
 {
 	
 	
-	int32_t SecondNum = 0 , firstNum =0 ,Sum= 0 ;
 	Fun_Add();
 
 	
