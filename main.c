@@ -2,14 +2,8 @@
 #include <stdint.h>
 
 
-
-
-
-int main(void)
+int Fun_Add(void)
 {
-	
-	
-	int32_t SecondNum = 0 , firstNum =0 ,Sum= 0 ;
 	
 	/* inform the user with the program operation */
 	printf(" welcome to the Add two number program \n ");
@@ -25,6 +19,18 @@ int main(void)
 	Sum = firstNum + SecondNum ;
 	
 	printf("the sum of  firstNum + SecondNum is = %d ", firstNum, SecondNum ,  Sum );
+	
+	
+}
+
+
+int main(void)
+{
+	
+	
+	int32_t SecondNum = 0 , firstNum =0 ,Sum= 0 ;
+	Fun_Add();
+
 	
 	
 	
