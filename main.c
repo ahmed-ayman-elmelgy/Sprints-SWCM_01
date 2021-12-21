@@ -2,11 +2,41 @@
 #include <stdint.h>
 
 
-int Fun_Add(void)
+int32_t Fun_Arithmetic( int32_t First_Num , int32_t Second_Num , int8_t operation)
+{
+	switch(operation)
+	{
+		case '+' :
+				return First_Num + Second_Num ;
+			break ; 
+		
+		case '-' :
+				return First_Num - Second_Num ;
+			break ; 		
+
+		case '/' :
+				return First_Num / Second_Num ;
+			break ; 
+
+		case '*' :
+				return First_Num * Second_Num ;			
+
+			break ; 	
+		default : 
+				printf("wrong operation /n") ;
+			break ;			
+	}
+	
+	
+}
+
+
+int main(void)
 {
 	
-	int32_t Sum = 0 , firstNum = 0 ,SecondNum = 0 ;
-
+	int32_t SecondNum = 0 , firstNum =0 , result =0  ;
+	int8_t operation = 0 ;
+	
 	/* inform the user with the program operation */
 	printf(" welcome to the Add two number program \n ");
 	
@@ -17,45 +47,12 @@ int Fun_Add(void)
 	/* ask user to enter the second number */
 	printf("enter the first num : \n ");
 	scanf("%d" , &SecondNum );
-	
-	Sum = firstNum + SecondNum ;
-	
-	printf("the sum of  firstNum + SecondNum is = %d ", firstNum, SecondNum ,  Sum );
-	
-	
-}
 
-int Fun_Subtrack(void)
-{
-	int32_t Subtraction = 0 , firstNum = 0 ,SecondNum = 0 ;
-	
-	/* inform the user with the program operation */
-	printf(" welcome to the subtraction two number program \n ");
-	
-	/* ask user to enter the first number */
-	printf("enter the first num : \n ");
-	scanf("%d" , &firstNum );
-	
 	/* ask user to enter the second number */
-	printf("enter the first num : \n ");
-	scanf("%d" , &SecondNum );
+	printf("enter operation Ex(+,-,*,/): \n ");
+	scanf("%d" , &operation );	
 	
-	Subtraction = firstNum - SecondNum ;
-	
-	printf("the subtraction of  firstNum - SecondNum is = %d ", firstNum, SecondNum ,  Subtraction );
-	
-	
-}
-
-int main(void)
-{
-	
-	
-	Fun_Add();
-
-	
-	
-	
+	return Fun_Arithmetic(firstNum ,SecondNum ,operation);
 	return 0 ;
 	
 }
