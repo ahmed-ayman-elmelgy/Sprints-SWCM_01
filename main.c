@@ -24,6 +24,7 @@ int32_t Fun_Arithmetic( int32_t First_Num , int32_t Second_Num , int8_t operatio
 			break ; 	
 		default : 
 				printf("wrong operation /n") ;
+				return 0 ;
 			break ;			
 	}
 	
